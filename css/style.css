@@ -1435,3 +1435,384 @@ p {
   color: var(--color-text-secondary);
   margin-bottom: var(--space-8);
 }
+
+/* --------------------------------------------------------------------------
+    21.  Yuwai Banner Component
+    -------------------------------------------------------------------------- */
+.yuwai-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(99,102,241,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(6,182,212,0.04) 0%, transparent 50%),
+    linear-gradient(145deg, #07070d 0%, #0c0a1e 30%, #0f0520 60%, #07070d 100%);
+  border: 1px solid var(--color-border);
+}
+
+.yuwai-banner-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(120px);
+}
+
+.yuwai-banner-glow-1 {
+  width: 500px;
+  height: 500px;
+  top: -200px;
+  right: -150px;
+  background: radial-gradient(circle, rgba(99,102,241,0.12), transparent 70%);
+}
+
+.yuwai-banner-glow-2 {
+  width: 400px;
+  height: 400px;
+  bottom: -150px;
+  left: -100px;
+  background: radial-gradient(circle, rgba(6,182,212,0.08), transparent 70%);
+}
+
+.yuwai-banner-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .yuwai-banner-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-10);
+    padding: var(--space-12) var(--space-10);
+  }
+}
+
+/* Left content */
+.yuwai-banner-left {
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .yuwai-banner-left {
+    flex: 0 0 42%;
+    max-width: 42%;
+  }
+}
+
+.yuwai-banner-icon {
+  margin-bottom: var(--space-5);
+}
+
+.yuwai-banner-icon svg {
+  width: 44px;
+  height: 44px;
+  display: block;
+  filter: drop-shadow(0 4px 20px rgba(99,102,241,0.3));
+}
+
+.yuwai-banner-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #fff 0%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-3);
+}
+
+.yuwai-banner-tagline {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: var(--color-accent-light);
+  font-weight: 500;
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.01em;
+}
+
+/* Features */
+.yuwai-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.yuwai-feature {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.yuwai-feature-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-accent-light);
+  opacity: 0.85;
+}
+
+.yuwai-feature div {
+  flex: 1;
+  min-width: 0;
+}
+
+.yuwai-feature strong {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 1px;
+}
+
+.yuwai-feature span {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+}
+
+/* Trust badges */
+.yuwai-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.yuwai-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.yuwai-trust-badge svg {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* Right - Mockup */
+.yuwai-banner-right {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yuwai-mockup {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 8px 40px rgba(0,0,0,0.3),
+    0 0 80px rgba(99,102,241,0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.yuwai-mockup-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.yuwai-mockup-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.yuwai-mockup-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: block;
+}
+
+.yuwai-mockup-dots span:nth-child(1) { background: #ff5f56; }
+.yuwai-mockup-dots span:nth-child(2) { background: #ffbd2e; }
+.yuwai-mockup-dots span:nth-child(3) { background: #27c93f; }
+
+.yuwai-mockup-title-bar {
+  flex: 1;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+  margin-right: 36px;
+}
+
+.yuwai-mockup-body {
+  padding: 16px;
+}
+
+.yuwai-mockup-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.yuwai-mockup-toggle-left {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.yuwai-mockup-toggle-left svg {
+  color: var(--color-accent-light);
+  opacity: 0.8;
+}
+
+.yuwai-toggle-track {
+  width: 38px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--color-accent);
+  position: relative;
+  cursor: default;
+  box-shadow: 0 0 12px rgba(99,102,241,0.2);
+}
+
+.yuwai-toggle-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Notification list */
+.yuwai-mockup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.yuwai-mockup-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 11px 12px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.yuwai-mockup-item-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.yuwai-icon-whatsapp { background: #25D366; }
+.yuwai-icon-gmail { background: #EA4335; }
+.yuwai-icon-instagram { background: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF); }
+.yuwai-icon-slack { background: linear-gradient(135deg, #4A154B, #E01563); }
+
+.yuwai-mockup-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.yuwai-mockup-item-sender {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 1px;
+}
+
+.yuwai-mockup-item-text {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+}
+
+.yuwai-text-hidden {
+  color: rgba(255,255,255,0.25);
+  filter: blur(3px);
+  user-select: none;
+}
+
+.yuwai-mockup-item-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  flex-shrink: 0;
+  max-width: 130px;
+  justify-content: flex-end;
+}
+
+.yuwai-control-btn {
+  display: inline-block;
+  padding: 2px 5px;
+  font-size: 0.625rem;
+  font-weight: 500;
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--color-text-tertiary);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.yuwai-control-active {
+  background: rgba(99,102,241,0.2);
+  border-color: rgba(99,102,241,0.35);
+  color: var(--color-accent-light);
+}
+
+/* Responsive mockup */
+@media (max-width: 767px) {
+  .yuwai-mockup {
+    max-width: 100%;
+  }
+
+  .yuwai-mockup-item-controls {
+    max-width: 100px;
+  }
+
+  .yuwai-control-btn {
+    font-size: 0.5625rem;
+    padding: 1px 4px;
+  }
+}
