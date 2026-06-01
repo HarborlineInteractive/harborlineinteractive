@@ -759,17 +759,6 @@ p {
   margin-bottom: var(--space-6);
 }
 
-.product-card-logo {
-  display: inline-block;
-  margin-bottom: var(--space-5);
-}
-
-.product-card-logo img {
-  height: 44px;
-  width: auto;
-  border-radius: var(--radius-sm);
-}
-
 .product-features {
   display: grid;
   gap: var(--space-3);
@@ -821,12 +810,10 @@ p {
 
 .product-banner-img {
   position: absolute;
-  inset: -20px;
-  width: calc(100% + 40px);
-  height: calc(100% + 40px);
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  filter: blur(16px) brightness(0.55);
-  opacity: 0.85;
   pointer-events: none;
   user-select: none;
 }
@@ -836,25 +823,10 @@ p {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(7, 7, 13, 0.55) 0%,
-    rgba(7, 7, 13, 0.2) 50%,
-    rgba(7, 7, 13, 0.4) 100%
+    rgba(7, 7, 13, 0.1) 0%,
+    transparent 50%,
+    rgba(7, 7, 13, 0.05) 100%
   );
-}
-
-.product-card-logo-wrapper {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-8);
-}
-
-.product-card-logo-wrapper img {
-  max-width: 120px;
-  height: auto;
-  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
 }
 
 /* Products page — banner screenshot card */
@@ -876,61 +848,7 @@ p {
   inset: 0;
 }
 
-.product-screenshot-card .product-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: var(--space-10);
-}
 
-.product-screenshot-card .product-content img {
-  max-width: 100px;
-  height: auto;
-  margin: 0 auto var(--space-4);
-  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
-}
-
-.product-screenshot-card .product-content p {
-  color: var(--color-text-secondary);
-  font-size: var(--text-sm);
-}
-
-/* Legacy placeholder (kept for safety) */
-.product-screenshot-placeholder {
-  width: 100%;
-  height: 100%;
-  min-height: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-4);
-  color: var(--color-text-tertiary);
-  font-size: var(--text-sm);
-  padding: var(--space-8);
-  text-align: center;
-}
-
-.product-screenshot-placeholder .placeholder-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--text-2xl);
-  font-weight: 700;
-}
-
-.placeholder-icon-primary {
-  background: rgba(99, 102, 241, 0.15);
-  color: var(--color-accent-light);
-}
-
-.placeholder-icon-cyan {
-  background: rgba(6, 182, 212, 0.15);
-  color: var(--color-cyan-light);
-}
 
 /* --------------------------------------------------------------------------
    10.  Feature Grid — Refined (Products page)
@@ -1147,22 +1065,6 @@ p {
   font-size: var(--text-2xl);
   font-weight: 700;
   margin-bottom: var(--space-4);
-}
-
-.product-full-header .product-logo-header {
-  display: block;
-  margin: 0 auto var(--space-5);
-  height: 56px;
-  width: auto;
-}
-
-.product-full-header h2 {
-  margin-bottom: var(--space-3);
-}
-
-.product-full-header p {
-  color: var(--color-text-secondary);
-  line-height: var(--leading-relaxed);
 }
 
 /* --------------------------------------------------------------------------
