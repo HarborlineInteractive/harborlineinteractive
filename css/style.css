@@ -747,6 +747,13 @@ p {
 .product-card-info {
   position: relative;
   z-index: 1;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-card-info {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
 }
 
 .product-card-info h3 {
@@ -809,6 +816,11 @@ p {
   height: auto;
   pointer-events: none;
   user-select: none;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-banner-img {
+  transform: scale(1.1);
 }
 
 .product-banner-overlay {
@@ -820,6 +832,11 @@ p {
     transparent 50%,
     rgba(7, 7, 13, 0.05) 100%
   );
+  transition: opacity 0.5s ease;
+}
+
+.product-card:hover .product-banner-overlay {
+  opacity: 0;
 }
 
 /* Products page — banner screenshot card */
